@@ -186,6 +186,87 @@ ol {
 }
 /* End of Bootstrap Reset */
 
+/* Start of Custom OWL */
+/* Arrows */
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--dark);
+  background-color: var(--light);
+  box-shadow: var(--shadow-sm);
+  border-radius: 50%;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.owl-carousel .owl-nav button.owl-prev:hover,
+.owl-carousel .owl-nav button.owl-next:hover {
+  color: var(--light);
+  background-color: var(--main-color);
+}
+[dir="ltr"] .owl-carousel .owl-nav button.owl-prev {
+  left: 0.5rem;
+}
+[dir="rtl"] .owl-carousel .owl-nav button.owl-prev {
+  left: auto;
+  right: 0.5rem;
+}
+[dir="ltr"] .owl-carousel .owl-nav button.owl-prev:hover {
+  left: 1rem;
+}
+[dir="rtl"] .owl-carousel .owl-nav button.owl-prev:hover {
+  left: auto;
+  right: 1rem;
+}
+[dir="ltr"] .owl-carousel .owl-nav button.owl-next {
+  right: 0.5rem;
+}
+[dir="rtl"] .owl-carousel .owl-nav button.owl-next {
+  right: auto;
+  left: 0.5rem;
+}
+[dir="ltr"] .owl-carousel .owl-nav button.owl-next:hover {
+  right: 1rem;
+}
+[dir="rtl"] .owl-carousel .owl-nav button.owl-next:hover {
+  right: auto;
+  left: 1rem;
+}
+/* Dots */
+.owl-carousel .owl-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.owl-carousel .owl-dots .owl-dot {
+  width: 32px;
+  height: 15px;
+  display: block;
+  border-radius: var(--radius);
+  border: 1px solid var(--main-color);
+  background-color: var(--grey-dark);
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+.owl-carousel .owl-dots .owl-dot.active,
+.owl-carousel .owl-dots .owl-dot:hover {
+  background-color: var(--main-color);
+}
+/* End of Custom OWL */
+
 /* Start of Header */
 .header-1 {
   background-color: var(--light);
@@ -551,6 +632,18 @@ ol {
 }
 /* End of Category Nav */
 /* End of Header */
+
+/* Start of Main Banner */
+.banner .banner-item {
+  display: flex;
+  height: 300px;
+}
+.banner .banner-item img {
+  object-fit: cover;
+  object-position: 50% 50%;
+  max-width: 100%;
+}
+/* End of Main Banner */
 
 /* Start of Footer */
 .footer {
