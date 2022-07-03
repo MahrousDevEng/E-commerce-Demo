@@ -119,6 +119,7 @@ ol {
   align-items: center;
   flex-shrink: 0;
   gap: var(--spacing);
+  min-width: 80px;
   height: 40px;
   text-align: center;
   text-transform: capitalize;
@@ -760,18 +761,35 @@ ol {
 }
 /* End of Main Banner */
 
-/* Start of Best Seller */
-.best-seller .owl-stage {
+/* Start of Best Seller & Offers */
+.best-seller .owl-stage,
+.offers .owl-stage {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
-[dir="ltr"] .best-seller .owl-stage {
+[dir="ltr"] .best-seller .owl-stage,
+[dir="ltr"] .offers .owl-stage  {
   padding-left: 0.5rem !important;
 }
-[dir="rtl"] .best-seller .owl-stage {
+[dir="rtl"] .best-seller .owl-stage,
+[dir="rtl"] .offers .owl-stage {
   padding-right: 0.5rem !important;
 }
-/* End of Best Seller */
+/* End of Best Seller & Offers */
+
+/* Start of New Arrivals */
+.new-arrival-item {
+  display: flex;
+  height: 300px;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.new-arrival-item img {
+  width: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+/* End of New Arrivals */
 
 /* Start of Footer */
 .footer {
