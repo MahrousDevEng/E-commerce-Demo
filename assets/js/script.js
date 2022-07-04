@@ -60,6 +60,25 @@ $(function () {
     $(this).parents(".search-form").toggleClass("show");
   });
 
+  // Go To Top Action
+  const scrollToTopButton = $("#goTop");
+
+  scrollToTopButton.on("click", function (e) {
+    e.preventDefault();
+
+    $("html, body").animate({ scrollTop: 0 }, 300);
+  });
+
+  // Toggle Go To Top Button on Window Scroll
+  $(window).on("scroll", function () {
+    if ($(this).scrollTop() > $(this).height()) {
+      !scrollToTopButton.hasClass("show") & scrollToTopButton.addClass("show");
+    } else {
+      scrollToTopButton.hasClass("show") &&
+        scrollToTopButton.removeClass("show");
+    }
+  });
+
   const commonCarouselOptions = {
     rtl: document.querySelector("html").dir === "rtl",
     lazyLoad: true,
